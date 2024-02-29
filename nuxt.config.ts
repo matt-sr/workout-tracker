@@ -1,15 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    baseURL: '/workout-tracker/', // Adjust this to match your repository name
+  },
   devtools: { enabled: true },
   modules: [
-    '@nuxtjs/pwa',
+    '@vite-pwa/nuxt',
   ],
   pwa: {
+    workbox: {
+      // Workbox options
+    },
     manifest: {
       name: 'Workout Tracker',
-      short_name: 'Workout',
-      description: 'A PWA to track your workouts!',
-      theme_color: '#4DBA87',
+      short_name: 'WorkoutTracker',
+      description: 'Track your workouts efficiently and effectively.',
+      theme_color: '#ffffff',
       lang: 'en',
     },
   },
